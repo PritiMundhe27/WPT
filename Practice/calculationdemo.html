@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <script>
+         var validatedata=(numid,errmsg)=>
+         {
+           var c= document.getElementById(numid).value;
+           if(c==="" || isNaN(c)) 
+           {
+            document.getElementById(errmsg).innerHTML="Enter numeric data"
+            return false
+           }
+           document.getElementById(errmsg).innerHTML=" "
+           return true;
+        }
+         var validatenumbers=()=> 
+         {
+            var flag=validatedata('n1',"err1")
+            var flag1=validatedata('n2',"err2")
+            if(flag && flag1)
+            {
+                alert("data is valid")
+                addnumbers();
+            }
+            else{
+                alert("Data is invalid")
+            }
+        }
+        var addnumbers=()=>
+        {
+            var a=parseInt(document.getElementById('n1').value);
+            var b=parseInt(document.getElementById('n2').value);
+            var ans=a+b;
+            document.getElementById("result").value=ans;
+            document.getElementById("mydiv").innerHTML=ans;
+        }
+    </script>
+    </head>
+    <body>
+        <form>
+            num1:<input type="text" name="num" id="n1"  /><span style="color: red;">*</span> <span style="color: red;" id="err1"></span> <br>
+            num2: <input type="text" name="number" id="n2"/><span style="color: red;">*</span>  <span style="color: red;" id="err2"></span><br>
+            result:<input type="text" name="result" id="result" disabled /><br>
+            <button type="button" name="btn" id="btn"  value="add" onclick="validatenumbers()">Add numbers</button>
+        </form>
+        <div id="mydiv">
+        </div>
+    </body>
+</html>
+
+    

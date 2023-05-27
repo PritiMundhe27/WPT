@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+            var changestring=()=>{
+               var sel=document.getElementById("operation");
+               var pos=sel.selectedIndex
+             //  alert(sel.selectedIndex)
+              // alert(sel.options[pos].value)
+               var cal=sel.options[pos].value;
+               var str=document.getElementById("string").value;
+
+
+               switch(cal){
+                case "upper":
+                    result="upper case: "+str.toUpperCase();
+                    break;
+                    case "lower":
+                        result="lower case: "+str.toLowerCase();
+                        break;
+                        case "split":
+                            result="split string: "
+
+               }
+               document.getElementById("mydiv").innerHTML=result;
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <form>
+           Enter String :<input type="text" name="string" id="string" >
+           operation: <select id="operation" >
+            <option value="upper">upper</option>
+            <option value="lower">lower</option>
+            <option value="split">split</option>
+            <option value="slice">slice</option>
+            <option value="replace">replace</option>
+            <option value="match">match</option>
+            <option value="indexof">indexof</option>
+            <option value="include">include</option>
+            <option value="search">search</option>
+            <option value="concat">concat</option>
+            <option value="charAt">charAt</option>
+           </select>
+           <button type="button" name="btn" id="btn"  onclick="changestring()">display Result</button>
+        </form>
+        <div id="mydiv"></div>
+    </body>
+</html>

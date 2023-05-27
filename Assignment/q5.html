@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Employee details</title>
+    </head>
+    <body>
+        <form>
+        <table border="1" style="background-color: coral; color: blue; border: 1px; border-color: black;  border-radius: 1%;">
+            <tr>
+                <td><label for="nm">Name:</label></td>
+                <td><input type="text" name="name" id="nm" ></td>
+            </tr>
+            <tr>
+                <td>Employee code:</td>
+                <td><input type="text" name="code" id="code"></td>
+            </tr>
+            <tr>
+                <td>Deparment</td>
+                <td>
+                    <input type="radio" name="btn" id="admin" value="ADMIN"><label>ADMIN</label><br>
+                    <input type="radio" name="btn" id="hr" value="HR"><label>HR</label><br>
+                    <input type="radio" name="btn" id="technical" value="technical"><label>TECHNICAL</label><br>
+                    <input type="radio" name="btn" id="accounts" value="Accounts"><label>ACCOUNTS</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Date Of Joining</td>
+               <td> <input type="date" name="date" id="date" value="date"><br><label >dd/mm/yyyy</label></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td> <textarea rows="3" cols="20" name="addr" id="addr">Address</textarea></td>
+            </tr>
+            <tr>
+                <td>Training program attended</td>
+                <td>
+                    <input type="checkbox" name="box" id="HTML" value="HTML/DHTML"><label>HTML/DHTML</label><br>
+                    <input type="checkbox" name="box" id="java" value="JAVA"><label>JAVA</label><br>
+                    <input type="checkbox" name="box" id="client/server" value="CLIENT/SERVER"><label>CLIENT/SERVER</label><br>
+                    <input type="checkbox" name="box" id=".net" value=".NET"><label>.NET</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Training program needs to attend</td>
+                <td>
+                    <textarea rows="3" cols="1" name="training" id="training"> 
+                            CSS
+                            JAVASCRIPT
+                            REACT
+                            JQUERY</textarea></td>
+            </tr>
+
+        </table>
+    </form>
+    </body>
+</html>
